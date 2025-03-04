@@ -33,8 +33,6 @@ function App(){
     todo[index].description= updatedValDesc
     setTodo([...todo])
   }
-  title.current.value = "";
-  description.current.value = "";
   return(
     <>
     <h1>TODO APP</h1>
@@ -46,23 +44,7 @@ function App(){
       <button>Add TODO</button>
     </form>
     <div>
-        {/* {todo.length > 0 ? todo.map((item , ) => {
-          return <div key={item.Id} style={{
-            border: '1px solid black',
-            borderRadius: '20px',
-            padding: '30px',
-            margin: '40px'
-          }}>
-            <h1>title: {item.title}</h1>
-            <h1>desc: {item.description}</h1><br />
-            <button style={{margin:`20px`}}>Update</button>
-            <button>Delete</button>
-          </div>
-        }) : <h1>No todo found...</h1>} */}
-
-
-
-      {todo.length > 0 ? todo.map((item , index)=>{
+    {todo.length > 0 ? todo.map((item , index)=>{
         return <div key={item.Id} style={{
           border: '1px solid black',
           borderRadius: '20px',
@@ -75,14 +57,8 @@ function App(){
           <button onClick={()=>deleteTodo(index)}>Delete</button>
         </div>
       }): <h1>No todos Found</h1>}
-
-
-
-
-
-      
       </div>
-    </>
+      </>
   )
   
 }
