@@ -17,6 +17,7 @@ function App(){
       Id : Date.now()
     })
     setTodo([...todo])
+    empty();
   }
 
 
@@ -33,6 +34,8 @@ function App(){
     todo[index].description= updatedValDesc
     setTodo([...todo])
   }
+  const empty = () => { title.current.value = ""; description.current.value = ""};
+
   return(
     <>
     <h1>TODO APP</h1>
