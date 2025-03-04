@@ -1,36 +1,116 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2a2a72, #009ffd);
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-
+/* Heading */
 h1 {
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Form Styling */
+form {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
+/* Input Fields */
 input {
-  
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  width: 80%;
+  padding: 12px;
+  border: 2px solid #009ffd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
 }
 
+input:focus {
+  border-color: #0051a3;
+}
+
+/* Add Button */
 button {
-  padding: 8px 12px;
+  background: linear-gradient(135deg, #009ffd, #2a2a72);
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #28a745;
+  padding: 12px 20px;
+  font-size: 1rem;
   color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background-color: #218838;
+  background: linear-gradient(135deg, #0051a3, #001f3f);
+  transform: scale(1.05);
+}
+
+/* Todos Container */
+div {
+  margin-top: 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Todo Card */
+div > div {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+  transition: 0.3s;
 }
 
 
+/* Buttons inside Todo */
+div > div button {
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Edit Button */
+div > div button:nth-child(1) {
+  background: #ffdd57;
+  color: #333;
+}
+
+div > div button:nth-child(1):hover {
+  background: #ffc107;
+}
+
+/* Delete Button */
+div > div button:nth-child(2) {
+  background: #ff4757;
+  color: white;
+}
+
+div > div button:nth-child(2):hover {
+  background: #e84118;
+}
